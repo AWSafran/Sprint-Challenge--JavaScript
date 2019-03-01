@@ -39,7 +39,8 @@ function greeting(firstName, lastName){
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: nestedFunction() can access the variable `internal` because it is within the scope that internal was declared in.
+// If nestedFunction() were declared outside the scope of myFunction(), it would not have access to `internal`
 
 
 const external = "I'm outside the function";
