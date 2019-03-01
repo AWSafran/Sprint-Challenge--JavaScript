@@ -57,3 +57,27 @@ console.log(cube.surfaceArea());
 let cubeFour = new Cube (4);
 console.log(cubeFour.volume());
 console.log(cubeFour.surfaceArea());
+
+class CubeOrCuboid{
+    constructor(length, width = length, height = length){
+        this.length = length;
+        this.width = width;
+        this.height = height;
+    }
+    volume(){
+        return this.length * this.width * this.height;
+    }
+    surfaceArea(){
+        return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+    }
+}
+
+let isCube = new CubeOrCuboid(3);
+
+console.log(isCube.volume());
+console.log(isCube.surfaceArea());
+
+let isCuboid = new CubeOrCuboid(1, 2, 3);
+
+console.log(isCuboid.volume());
+console.log(isCuboid.surfaceArea());
